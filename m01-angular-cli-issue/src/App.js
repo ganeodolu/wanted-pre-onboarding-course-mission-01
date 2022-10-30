@@ -1,13 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import IssueListPage from './Pages/IssueListPage';
+import IssueListPage from "./Pages/IssueListPage";
+import Header from "./Components/Header";
 
 function App() {
   return (
     <>
+      <Header></Header>
       <Routes>
-        <Route path='/' element={<IssueListPage />} />
+        <Route path="/" element={<IssueListPage />} />
       </Routes>
     </>
   );
