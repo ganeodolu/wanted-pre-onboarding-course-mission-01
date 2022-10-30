@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import IssueList from "../Components/IssueList";
+import IssuesProvider from "../lib/states/IssuesProvider";
 
 const IssueListPage = () => {
   return (
-    <div>IssueListPage</div>
-  )
-}
+    <IssuesProvider>
+      <IssueList />
+    </IssuesProvider>
+  );
+};
 
-export default IssueListPage
+export default IssueListPage;
