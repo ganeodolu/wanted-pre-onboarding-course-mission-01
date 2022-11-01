@@ -1,12 +1,14 @@
+import { CONSTANTS } from "../constants/constants";
 import API from "./main";
+
 
 export const getIssues = async (page) => {
   try {
-    const response = await API.get(`/repos/angular/angular-cli/issues`, {
+    const response = await API.get("/repos/angular/angular-cli/issues", {
       params: {
-        state: 'open',
+        state: "open",
         sort: "comments",
-        per_page: 10,
+        per_page: CONSTANTS.PER_PAGE,
         page
       }
     });
