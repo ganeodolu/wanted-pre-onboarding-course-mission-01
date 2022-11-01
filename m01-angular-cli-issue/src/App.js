@@ -7,6 +7,7 @@ function App() {
   return (
     <>
       <Header></Header>
+      <br />
       <Routes>
         <Route path="/" element={<IssueListPage />} />
       </Routes>

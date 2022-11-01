@@ -6,14 +6,10 @@ const IssueItem = ({ issueItem }) => {
   return (
     <>
       <div>
-        <div>
-          {`#${number} ${title}`}
-        </div>
-        <div>
-          {`${user.login} ${updated_at}`}
-        </div>
+        <div>{`#${number} ${title}`}</div>
+        <div>{`${user.login} ${updated_at}`}</div>
       </div>
-      {comments}
+      {/* {comments} */}
     </>
   );
 };
