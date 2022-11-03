@@ -153,6 +153,7 @@ export const MOCK_UP = [
 ];
 
 export const SEGMENT = {
+  ALL: "전체",
   E: "대형",
   D: "중형",
   C: "소형",

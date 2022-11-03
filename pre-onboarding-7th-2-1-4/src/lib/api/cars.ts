@@ -9,7 +9,7 @@ export const getCars = async ({ fuelType, segment }: CarParams) => {
         segment
       }
     });
-    return response.data;
+    return response.data.payload;
   } catch (error) {
     console.log(error);
   }

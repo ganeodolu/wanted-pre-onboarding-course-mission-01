@@ -1,4 +1,5 @@
 import { PALLETTE } from "@/lib/constants/constants";
+import { Segment } from "@/lib/interfaces";
 import React from "react";
 import styled from "styled-components";
 
@@ -12,6 +13,7 @@ interface Props {
   borderRadius: string;
   children: string;
   marginRight: string;
+  dataSegment: Segment;
   onClickButton: any;
 }
 
@@ -26,8 +28,10 @@ const Button = (props: Props) => {
     border,
     borderRadius,
     marginRight,
+    dataSegment,
     children
   } = props;
+
   const styles = {
     width,
     height,
@@ -40,7 +44,12 @@ const Button = (props: Props) => {
 
   return (
     <>
-      <ButtonBox type={type} {...styles} onClick={onClickButton}>
+      <ButtonBox
+        type={type}
+        data-segment={dataSegment}
+        {...styles}
+        onClick={onClickButton}
+      >
         {children}
       </ButtonBox>
     </>
@@ -50,8 +59,8 @@ const Button = (props: Props) => {
 Button.defaultProps = {
   width: "62px",
   height: "27px",
-  backgroundColor: PALLETTE.BLACK,
-  color: PALLETTE.WHITE,
+  backgroundColor: PALLETTE.GREY,
+  color: PALLETTE.BLACK,
   border: 0,
   type: "button",
   borderRadius: "62px",
@@ -62,7 +71,13 @@ Button.defaultProps = {
 const ButtonBox = styled.button<
   Pick<
     Props,
-    "backgroundColor" | "width" | "height" | "border" | "color" | "borderRadius" | "marginRight"
+    | "backgroundColor"
+    | "width"
+    | "height"
+    | "border"
+    | "color"
+    | "borderRadius"
+    | "marginRight"
   >
 >`
   background-color: ${({ backgroundColor }) => backgroundColor};
@@ -71,7 +86,7 @@ const ButtonBox = styled.button<
   border: ${({ border }) => border};
   border-radius: ${({ borderRadius }) => borderRadius};
   color: ${({ color }) => color};
-  margin-right:  ${({ marginRight }) => marginRight};
+  margin-right: ${({ marginRight }) => marginRight};
 `;
 
 export default Button;
