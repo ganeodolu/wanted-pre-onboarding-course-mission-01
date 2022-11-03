@@ -1,7 +1,6 @@
 import { CONSTANTS } from "../constants/constants";
 import API from "./main";
 
-
 export const getIssues = async (page) => {
   try {
     const response = await API.get("/repos/angular/angular-cli/issues", {
