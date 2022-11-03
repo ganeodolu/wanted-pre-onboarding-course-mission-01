@@ -8,7 +8,6 @@ import CarItem from "./CarItem";
 
 const CarList = () => {
   const [filter] = useRecoilState(filterState);
-  console.log(filter);
   const { data, isLoading, isError } = useQuery<Car[], Error>(
     ["cars", filter],
     () =>
@@ -17,7 +16,6 @@ const CarList = () => {
         segment: filter.segment
       })
   );
-  console.log(data);
 
   if (isLoading) {
     return <span>불러오는 중</span>;

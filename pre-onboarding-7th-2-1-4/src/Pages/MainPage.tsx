@@ -12,7 +12,6 @@ const MainPage = () => {
   const handleFilter = (e: React.MouseEvent<HTMLElement>) => {
     const target = e.target as HTMLButtonElement;
     if (target.tagName !== "BUTTON") return;
-    console.log(target.dataset.segment);
     setFilter({
       ...filter,
       segment: target.dataset.segment as Segment
