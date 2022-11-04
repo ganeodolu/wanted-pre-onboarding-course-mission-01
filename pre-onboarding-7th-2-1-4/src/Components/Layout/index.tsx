@@ -1,12 +1,12 @@
-import Header from "@/Components/Layout/Header";
 import React from "react";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
+import HeaderBar from "./HeaderBar";
 
 const Layout = () => {
   return (
     <Container>
-      <Header />
+      <HeaderBar />
       <div className="content">
         <Outlet />
       </div>
