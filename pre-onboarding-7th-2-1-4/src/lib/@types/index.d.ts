@@ -1,3 +1,5 @@
+import { SEGMENT } from "../constants/constants";
+
 interface IInsurance {
   name: string;
   description: string;
@@ -24,28 +26,9 @@ export interface Car {
   additionalProducts?: IAdditionalProducts[];
 }
 
-const SEGMENT = {
-  ALL: "전체",
-  E: "대형",
-  D: "중형",
-  C: "소형",
-  SUV: "SUV"
-} as const;
-
-const FUELTYPE = {
-  ALL: "전체",
-  gasoline: "가솔린",
-  ev: "전기",
-  hybrid: "하이브리드"
-} as const;
-
 export type Segment = keyof typeof SEGMENT;
 
 export type SegmentValue = typeof SEGMENT[Segment];
-
-export type FuelType = keyof typeof FUELTYPE;
-
-export type FuelTypeValue = typeof FUELTYPE[FuelType];
 
 export interface CarParams {
   fuelType?: FuelType;
