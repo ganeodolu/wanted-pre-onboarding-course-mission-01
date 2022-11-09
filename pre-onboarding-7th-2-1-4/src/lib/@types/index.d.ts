@@ -1,4 +1,4 @@
-import { SEGMENT } from "../constants/constants";
+import { SEGMENT, FUELTYPE } from "../constants/constants";
 
 interface IInsurance {
   name: string;
@@ -29,6 +29,10 @@ export interface Car {
 export type Segment = keyof typeof SEGMENT;
 
 export type SegmentValue = typeof SEGMENT[Segment];
+
+export type FuelType = keyof typeof FUELTYPE;
+
+export type FuelTypeValue = typeof FUELTYPE[FuelType];
 
 export interface CarParams {
   fuelType?: FuelType;
