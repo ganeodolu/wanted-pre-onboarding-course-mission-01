@@ -1,24 +1,25 @@
-import React, {useEffect} from 'react'
-import API from 'src/lib/api'
+import React from 'react'
+import SearchInput from 'src/Components/SearchInput'
+import SearchSuggestion from 'src/Components/SearchSuggestion'
 
 type Props = {}
 
 const HomePage = (props: Props) => {
 
-    useEffect(() => {
-    const test = async () => {
-      const data = await API.getKeyword('류마티스')
-      console.log(data);
-    }
-    test()
-  }, [])
+  //   useEffect(() => {
+  //   const test = async () => {
+  //     const data = await API.getKeyword('류마티스')
+  //     console.log(data);
+  //   }
+  //   test()
+  // }, [])
 
   return (
     <div>
       <p>국내 모든 임상시험 검색하고 온라인으로 참여하기</p>
-      <form className="SearchInput">
-        <input className="SearchInput__input" type="text" placeholder="질환명을 입력해 주세요." autoFocus />
-      </form>
+      <SearchInput />
+      {/* <SearchedKeyword /> */}
+      <SearchSuggestion />
     </div>
   )
 }
