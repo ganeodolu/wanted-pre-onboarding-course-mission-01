@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { AiOutlineLock, AiOutlineLogout, AiOutlineUser } from "react-icons/ai";
 import Footer from "src/components/common/Footer";
-import { logIn } from "./api";
+import { logIn } from "src/components/views/Login/api";
 
 const Login: NextPage = () => {
   const router = useRouter();
