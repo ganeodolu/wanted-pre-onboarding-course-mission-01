@@ -1,4 +1,4 @@
-import Layout from "@/Components/Layouts/Layout";
+import Layout from "@/Components/Layout";
 import DetailPage from "@/Pages/DetailPage";
 import MainPage from "@/Pages/MainPage";
 import NotFoundPage from "@/Pages/NotFoundPage";
@@ -9,12 +9,10 @@ const CustomRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route path="/" element={<MainPage />} />
-        <Route path="detail" element={<DetailPage />}>
-          <Route path=":id" element={<DetailPage />} />
-        </Route>
+        <Route index element={<MainPage />} />
+        <Route path="detail/:id" element={<DetailPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
-      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 };

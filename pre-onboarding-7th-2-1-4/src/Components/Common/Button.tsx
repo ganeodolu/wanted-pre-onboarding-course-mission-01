@@ -1,5 +1,5 @@
 import { PALLETTE } from "@/lib/constants/constants";
-import { Segment } from "@/lib/interfaces";
+import { Segment } from "@/lib/@types";
 import React from "react";
 import styled from "styled-components";
 
